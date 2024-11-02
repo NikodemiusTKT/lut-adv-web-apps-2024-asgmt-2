@@ -48,7 +48,7 @@ const Plane: IPlane = {
   color: "White",
   year: 2020,
   power: 170000,
-  wingSpan: 65,
+  wingspan: 65,
 };
 
 const Boat: IBoat = {
