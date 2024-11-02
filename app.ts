@@ -31,7 +31,7 @@ interface IBoat extends IVehicle {
   draft: number;
 }
 interface IPlane extends IVehicle {
-  wingSpan: number;
+  wingspan: number;
 }
 
 const Car: ICar = {
