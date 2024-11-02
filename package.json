@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.js"
+    "start": "ts-node src/index.js",
+    "commit": "cz",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -24,8 +26,18 @@
   },
   "homepage": "https://github.com/NikodemiusTKT/lut-adv-web-apps-2024-asgmt-2#readme",
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@types/node": "^22.8.6",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
