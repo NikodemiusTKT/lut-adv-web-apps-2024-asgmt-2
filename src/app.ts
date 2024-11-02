@@ -59,5 +59,27 @@ const Boat: IBoat = {
   draft: 0.42,
 };
 
-const vehicles: Array<IVehicle> = [Car, Plane, Boat];
-console.log(vehicles);
+console.log(Car);
+console.log(Plane);
+console.log(Boat);
+
+class VehicleService<T> {
+  private items: T[] = [];
+
+  add(item: T): void {
+    this.items.push(item);
+  }
+
+  list(): T[] {
+    return this.items;
+  }
+}
+
+const cars = new VehicleService<ICar>();
+const boats = new VehicleService<IBoat>();
+
+cars.add(Car);
+boats.add(Boat);
+
+console.log(cars.list());
+console.log(boats.list());
